@@ -1,4 +1,4 @@
-const Neotro = require('../events');
+const Stefanie = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const axios = require('axios');
 const Config = require('../config');
@@ -7,7 +7,7 @@ const Lang = Language.getString('amazone');
 
 
 if (Config.WORKTYPE == 'public') {
-Neotro.addCommand({ pattern: 'ftext ?(.*)', desc: Lang.FRANCY, fromMe: false }, async (message, match) => {
+Stefanie.addCommand({ pattern: 'ftext ?(.*)', desc: Lang.FRANCY, fromMe: false }, async (message, match) => {
 
 const word = match[1]
 if (!word) return await message.sendMessage(" *Please Input Word* ")
@@ -23,7 +23,7 @@ await axios
         } = response.data
 
    
-	const msg = `**◁◉◉◉◉Fancy Text◉◉◉▷* \n             *👩‍🦰ᴀᴍᴀᴢᴏɴᴇ ᴀʟᴇxᴀ* * \n              \n\n ${result} \n\n                 *◄◉◉◉◉◉◉◉◉◉◉ᴀʟᴇxᴀ◉◉◉◉◉◉◉◉►*`
+	const msg = `**◁◉◉◉◉Fancy Text◉◉◉▷* \n             *👩‍🦰ᴀᴍᴀᴢᴏɴᴇ ᴀʟp* * \n              \n\n ${result} \n\n                 *◄◉◉◉◉◉◉◉◉◉◉ᴀʟᴇxᴀ◉◉◉◉◉◉◉◉►*`
 	
 	 await message.client.sendMessage(message.jid, msg , MessageType.text, {
           quoted: message.data,
@@ -35,7 +35,7 @@ await axios
   
 else if (Config.WORKTYPE == 'private') {
 	
-	Neotro.addCommand({ pattern: 'ftext ?(.*)', desc: Lang.FRANCY, fromMe: true }, async (message, match) => {
+	Stefanie.addCommand({ pattern: 'ftext ?(.*)', desc: Lang.FRANCY, fromMe: true }, async (message, match) => {
 
 const word = match[1]
 if (!word) return await message.sendMessage(" *Please Input Word* ")
@@ -51,7 +51,7 @@ await axios
         } = response.data
 
    
-	const msg = `*◁◉◉◉◉Fancy Text◉◉◉▷* \n             *👩‍🦰ᴀᴍᴀᴢᴏɴᴇ ᴀʟᴇxᴀ* \n\n ${result} \n\n                \n*◄◉◉◉◉◉◉◉◉◉◉ᴀʟᴇxᴀ◉◉◉◉◉◉◉◉►*`
+	const msg = `*◁◉◉◉◉Fancy Text◉◉◉▷* \n             *👩‍🦰Stefanie* \n\n ${result} \n\n                \n*◄◉◉◉◉◉◉◉◉◉◉ᴀʟᴇxᴀ◉◉◉◉◉◉◉◉►*`
 	
 	 await message.client.sendMessage(message.jid, msg , MessageType.text, {
           quoted: message.data,
