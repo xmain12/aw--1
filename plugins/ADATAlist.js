@@ -4,7 +4,7 @@ you may not use this file except in compliance with the License.
 VIRUS - FUCKER
 */
 
-const Alexa = require('../events');
+const Stefanie = require('../events');
 const {MessageType, GroupSettingChange, Mimetype, MessageOptions} = require('@adiwajshing/baileys');
 const fs = require('fs');
 const Config = require('../config')
@@ -18,7 +18,7 @@ let tn = Config.WORKTYPE == 'public' ? false : true
 const Language = require('../language');
 const Lang = Language.getString('amazone');
 
-Alexa.addCommand({pattern: 'freedata', fromMe: tn, desc:Lang.DATA}, (async (message, match) => {
+Stefanie.addCommand({pattern: 'freedata', fromMe: tn, desc:Lang.DATA}, (async (message, match) => {
     const rows = [
         {title: '⚙️සැකසුම්', description: "⚙️සැකසුම්\n\n\n💎ඔබ දැනටමත් අන්තර්ජාල සැරිසන්නෙකු වශයෙන් දන්නා කරුණක් තමයි Ehi,sks,ray files මඟින් ඔබ Active කළ ඇති පැකේජ මගින් නොමිලේ අන්තර්ජාලය භාවිත කල හැකි බව...\n\n💎ඇත්තටම  කොහොමද එහෙම කරන්නෙ...? මොනාද ඕනී..?\n\n🛡️HTTP App එක\n💬Apk ලබාගැනීමට( .apkhttp )\n\n🛡️ඉන්පසු ඔබ Active  කළ පැකේජයට අදාළ ehi ෆයිල් එක Download කරගන්න\n\n🛡️අදාල ෆයිල් download කළ පසු HTTP INJECTOR App එක හරහා Open කරගන්න\n\n🛡️ අවසාන වශයෙන් START බටනය Click කරන්න.. එවිට Vpn ක්‍රියාත්මක කිරීමට අවසර ලබාදෙන්න.\n\n*💰දැන් ඔබට අන්තර්ජාලයට අදාළ පැකේජය මඟින් පිවිසිය හැක.*\n\n", rowId:"tenu1"},
         {title: '🔴DIALOG EHI🔴', description: "🔴DIALOG EHI\n\n\n*🛡️PACKAGE NAME* : Whatsapp\n*💬COMMAND* : .DWEHI\n\n*🛡️PACKAGE NAME* : Youtube\n*💬COMMAND* : .DYEHI\n\n*🛡️PACKAGE NAME* : Facebook\n*💬COMMAND* :  .DFEHI\n\n*🛡️PACKAGE NAME* : Zoom\n*💬COMMAND* :  .DZEHI", rowId:"tenu2"},
@@ -28,11 +28,11 @@ Alexa.addCommand({pattern: 'freedata', fromMe: tn, desc:Lang.DATA}, (async (mess
         {title: '💰SSH ACCOUNT💰', description: "💰SSH ACCOUNT\n\n\n🛡️SSH ACCOUNT\n💬 .ssh(ඉදිරියෙදි බලාපොරොත්තු වන්න)", rowId:"tenu6"}
        ]
        
-       const sections = [{title: "©️Alexa-Teenuh", rows: rows}]
+       const sections = [{title: "©️STEFANIE-BOT", rows: rows}]
        
        const button = {
         buttonText: 'Free Data!',
-        description: "💰Amazone Alexa\n Free Data ලැයිස්තුව",
+        description: "💰Queen Stefanie\n Free Data ලැයිස්තුව",
         sections: sections,
         listType: 1
        }

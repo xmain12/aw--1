@@ -1,10 +1,10 @@
-/* Copyright (C) 2021 TENUX-Neotro.
+/* Copyright (C) 2021 ws virus Fucker.
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
-NEOTROX - TEENUHX
+VIRUS - FUCKER
 */
 
-const Neotro = require('../events');
+const Stefanie = require('../events');
 const Heroku = require('heroku-client');
 const Config = require('../config');
 const {MessageType} = require('@adiwajshing/baileys');
@@ -25,7 +25,7 @@ const heroku = new Heroku({
 
 let baseURI = '/apps/' + Config.HEROKU.APP_NAME;
 
-Neotro.addCommand({pattern: 'install ?(.*)', fromMe: true, desc: Lang.INSTALL_DESC, warn: Lang.WARN}, (async (message, match) => {
+Stefanie.addCommand({pattern: 'install ?(.*)', fromMe: true, desc: Lang.INSTALL_DESC, warn: Lang.WARN}, (async (message, match) => {
     if (match[1] === '') return await message.sendMessage(Lang.NEED_URL + '.install https://gist.github.com/Neotro23/4232b1c8c4734e1f06c3d991149c6fbd')
     try {
         var url = new URL(match[1]);
@@ -67,7 +67,7 @@ Neotro.addCommand({pattern: 'install ?(.*)', fromMe: true, desc: Lang.INSTALL_DE
     }
 }));
 
-Neotro.addCommand({pattern: 'pluglist', fromMe: true, desc: Lang.PLUGIN_DESC }, (async (message, match) => {
+Stefanie.addCommand({pattern: 'pluglist', fromMe: true, desc: Lang.PLUGIN_DESC }, (async (message, match) => {
     var mesaj = Lang.PLIST;
     var plugins = await Db.PluginDB.findAll();
     if (plugins.length < 1) {
@@ -83,7 +83,7 @@ Neotro.addCommand({pattern: 'pluglist', fromMe: true, desc: Lang.PLUGIN_DESC }, 
     }
 }));
 
-Neotro.addCommand({pattern: 'remove(?: |$)(.*)', fromMe: true, desc: Lang.REMOVE_DESC}, (async (message, match) => {
+Stefanie.addCommand({pattern: 'remove(?: |$)(.*)', fromMe: true, desc: Lang.REMOVE_DESC}, (async (message, match) => {
     if (match[1] === '') return await message.sendMessage(Lang.NEED_PLUGIN);
     if (!match[1].startsWith('.')) match[1] = '.' + match[1];
     var plugin = await Db.PluginDB.findAll({ where: {name: match[1]} });

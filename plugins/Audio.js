@@ -4,7 +4,7 @@ you may not use this file except in compliance with the License.
 VIRUS - FUCKER
 */
 
-const amazone = require('../events');
+const Stefanie = require('../events');
 const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 const axios = require('axios');
 const { errorMessage, infoMessage } = require('../helpers');
@@ -21,7 +21,7 @@ const NO_RESULT = "🌀 *Can't Find Anything...*"
 
 if (Config.WORKTYPE == 'private') {
 
-    amazone.addCommand({ pattern: 'audio ?(.*)', fromMe: true, desc: YTV_DESC,  deleteCommand: false}, async (message, match) => {
+    Stefanie.addCommand({ pattern: 'audio ?(.*)', fromMe: true, desc: YTV_DESC,  deleteCommand: false}, async (message, match) => {
 
         const link = match[1]
     
@@ -47,7 +47,7 @@ if (Config.WORKTYPE == 'private') {
 }
 
 else if (Config.WORKTYPE == 'public') {
-    amazone.addCommand({ pattern: 'audio ?(.*)', fromMe: true, desc: YTV_DESC,  deleteCommand: false}, async (message, match) => {
+    Stefanie.addCommand({ pattern: 'audio ?(.*)', fromMe: true, desc: YTV_DESC,  deleteCommand: false}, async (message, match) => {
 
         const link = match[1]
     
@@ -71,7 +71,7 @@ else if (Config.WORKTYPE == 'public') {
       },
     );
 	
-	amazone.addCommand({ pattern: 'audio ?(.*)', fromMe: false, dontAddCommandList:true,  deleteCommand: false}, async (message, match) => {
+	Stefanie.addCommand({ pattern: 'audio ?(.*)', fromMe: false, dontAddCommandList:true,  deleteCommand: false}, async (message, match) => {
 
         const link = match[1]
     

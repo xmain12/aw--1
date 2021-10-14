@@ -4,7 +4,7 @@ you may not use this file except in compliance with the License.
 VIRUS - FUCKER
 */
 
-const Teenu = require('../events');
+const Stefanie = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const exec = require('child_process').exec;
 const os = require("os");

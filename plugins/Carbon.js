@@ -8,14 +8,14 @@ const Neotro = require('../events');
 const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 const axios = require('axios');
 const Config = require('../config');
-const dd = "👩‍🦰Queen Amazone"
+const dd = "👩‍🦰Queen Stefanie"
 const Language = require('../language');
 const Lang = Language.getString('amazone');
 
 
 if (Config.WORKTYPE == 'private') {
 
-    Neotro.addCommand({pattern: 'carbon$', fromMe: true, desc: Lang.CARBON}, (async (message, match) => {
+    Stefanie.addCommand({pattern: 'carbon$', fromMe: true, desc: Lang.CARBON}, (async (message, match) => {
 
         if (!message.reply_message) return await message.client.sendMessage(message.jid,Lang.REPLY, MessageType.text);
 
@@ -82,7 +82,7 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
 
-    Neotro.addCommand({pattern: 'carbon$', fromMe: false, desc: Lang.CARBON}, (async (message, match) => {
+    Stefanie.addCommand({pattern: 'carbon$', fromMe: false, desc: Lang.CARBON}, (async (message, match) => {
 
         if (!message.reply_message) return await message.client.sendMessage(message.jid,Lang.REPLY, MessageType.text);
 

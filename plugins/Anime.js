@@ -5,7 +5,7 @@ VIRUS - FUCKER
 */
 
 
-const Neotro = require('../events');
+const Stefanie = require('../events');
 const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 const axios = require('axios');
 const Config = require('../config');
@@ -14,7 +14,7 @@ const Lang = Language.getString('amazone');
 
 if (Config.WORKTYPE == 'private') {
 
-    Neotro.addCommand({pattern: 'anime', fromMe: true, desc: Lang.ANIM_DESC}, (async (message, match) => {
+    Stefanie.addCommand({pattern: 'anime', fromMe: true, desc: Lang.ANIM_DESC}, (async (message, match) => {
 
     var r_text = new Array ();
 
@@ -108,7 +108,7 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
 
-    Neotro.addCommand({pattern: 'anime', fromMe: false, desc: Lang.ANIM_DESC}, (async (message, match) => {
+    Stefanie.addCommand({pattern: 'anime', fromMe: false, desc: Lang.ANIM_DESC}, (async (message, match) => {
 
     var r_text = new Array ();
 
