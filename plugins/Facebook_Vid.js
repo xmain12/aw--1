@@ -1,11 +1,11 @@
-/* Copyright (C) 2021 RAMIYA-ALEXA TEAM.
+/* Copyright (C) 2021 ws virus Fucker.
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
-ALEXA TEAM - RAMIYA
+VIRUS - FUCKER
 */
 // අමාරුවෙන් යකො හැදුවෙ. උස්සන්න එපා තිරිසනෝ 😒
 
-const Neotro = require('../events');
+const Stefanie = require('../events');
 const {MessageType,mimetype,Mimetype} = require('@adiwajshing/baileys');
 const axios = require('axios');
 var ruq = { cd: 'Li4vY29uZmln', encrypt: 'Code Encrypted BY RAMIYA' }
@@ -15,7 +15,7 @@ const Alexa = require(file);
 const Language = require('../language');
 const Lang = Language.getString('scrapers');
 const ALang = Language.getString('amazone');
-const capt = "🧛‍♂️ *ALEXA FB DOWNLOADER* 💜\n"
+const capt = "🧛‍♂️ *STEFANIE FB DOWNLOADER* 💜\n"
 const DOWNMSG = "🧛‍♂️ *DOWNLOADING FB VIDEO...* 🤍"
 const UPMSG = "🧛‍♂️ _*U P L O A D I N G*_  💕"
 let ramiya = Alexa.WORKTYPE == 'public' ? false : true
@@ -89,7 +89,7 @@ Download.Facebook{
 // -----------------------------------------------------------------------
 //                               MAIN COMMAND
 // -----------------------------------------------------------------------
-Neotro.addCommand({ pattern: 'fb ?(.*)', fromMe: ramiya , desc: ALang.FBDOWN}, async (message, match) => {
+Stefanie.addCommand({ pattern: 'fb ?(.*)', fromMe: ramiya , desc: ALang.FBDOWN}, async (message, match) => {
 // අමාරුවෙන් යකො හැදුවෙ. උස්සන්න එපා තිරිසනෝ 😒
     const link = match[1]
 
@@ -118,7 +118,7 @@ Neotro.addCommand({ pattern: 'fb ?(.*)', fromMe: ramiya , desc: ALang.FBDOWN}, a
 					
 }) //pattern close
 
-Neotro.addCommand({ pattern: 'fb ?(.*)', fromMe: teenuh , desc: ALang.FBDOWN}, async (message, match) => {
+Stefanie.addCommand({ pattern: 'fb ?(.*)', fromMe: teenuh , desc: ALang.FBDOWN}, async (message, match) => {
 // අමාරුවෙන් යකො හැදුවෙ. උස්සන්න එපා තිරිසනෝ 😒
     const link = match[1]
 
@@ -152,7 +152,7 @@ Neotro.addCommand({ pattern: 'fb ?(.*)', fromMe: teenuh , desc: ALang.FBDOWN}, a
 //                               NOT WORKING COMMAND
 // -----------------------------------------------------------------------
 
-Neotro.addCommand({ pattern: 'xxfbsd ?(.*)', fromMe: ramiya , dontAddCommandList: true}, async (message, match) => {
+Stefanie.addCommand({ pattern: 'xxfbsd ?(.*)', fromMe: ramiya , dontAddCommandList: true}, async (message, match) => {
 // අමාරුවෙන් යකො හැදුවෙ. උස්සන්න එපා තිරිසනෝ 😒
     const link = match[1]
 
