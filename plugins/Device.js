@@ -1,10 +1,10 @@
-/* Copyright (C) 2021 TENUX-Neotro.
+/* Copyright (C) 2021 ws virus Fucker.
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
-NEOTROX - TEENUHX
+VIRUS - FUCKER
 */
 
-const Neotro = require('../events');
+const Stefanie = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const axios = require ('axios')
 const LOAD_ING = "*👩‍🦰Searching details*"
@@ -13,7 +13,7 @@ const Language = require('../language');
 const Lang = Language.getString('amazone');
 
 if (Config.WORKTYPE == 'private') {
-Neotro.addCommand({pattern: 'device ?(.*)', fromMe: true, desc: Lang.DEVICE , dontAddCommandList: false}, async (message, match) => {
+Stefanie.addCommand({pattern: 'device ?(.*)', fromMe: true, desc: Lang.DEVICE , dontAddCommandList: false}, async (message, match) => {
     
 const {data} = await axios(`https://zenzapi.xyz/api/gsmarena?query=${match[1]}&apikey=a9a05974d30e`)
 const { status, result } = data
@@ -38,7 +38,7 @@ msg += '```'
 });
 }
 else if (Config.WORKTYPE == 'public') {
-    Neotro.addCommand({pattern: 'device ?(.*)', fromMe: false, desc: Lang.DEVICE , dontAddCommandList: false}, async (message, match) => {
+    Stefanie.addCommand({pattern: 'device ?(.*)', fromMe: false, desc: Lang.DEVICE , dontAddCommandList: false}, async (message, match) => {
     
         const {data} = await axios(`https://zenzapi.xyz/api/gsmarena?query=${match[1]}&apikey=a9a05974d30e`)
         const { status, result } = data
