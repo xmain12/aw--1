@@ -752,8 +752,10 @@ else if (config.WORKTYPE == 'public') {
                     });
                 writer.addTag();
 
-                reply = await message.client.sendMessage(message.jid,config.SONGU,MessageType.text);
-                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: false, quoted: message.data});
+                reply = await message.client.sendMessage(message.jid, fs.readFileSync('./' + title + '.jpg'), MessageType.image, {caption: '*» 𝑴𝒖𝒔𝒊𝒄 𝒇𝒊𝒍𝒆 «*\n\n*» Title* : '+ title +'\n*» Ext* : MP3\n\n*_𝑷𝒍𝒆𝒂𝒔𝒆 𝒘𝒂𝒊𝒕 𝒇𝒐𝒓 𝒕𝒉𝒆 𝒎𝒆𝒅𝒊𝒂 𝒇𝒊𝒍𝒆 𝒕𝒐 𝒃𝒆 𝒔𝒆𝒏𝒕 𝒊𝒕 𝒎𝒂𝒚 𝒕𝒂𝒌𝒆 𝒂 𝒇𝒆𝒘 𝒎𝒊𝒏𝒖𝒕𝒆𝒔_*' });
+                await message.client.sendMessage(message.jid,config.SONGU,MessageType.text);
+                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.document, {filename: title + '.mp3', mimetype: 'audio/mpeg', contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(message.jid ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "𝑻𝒉𝒊𝒔 𝒊𝒔 𝒚𝒐𝒖𝒓 𝒅𝒐𝒄𝒖𝒎𝒆𝒏𝒕 𝒇𝒊𝒍𝒆", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('./src/image/Stefanie.png')}}}});
+                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.audio, {mimetype: Mimetype.mp4Audio, contextInfo: { forwardingScore: 49, isForwarded: true }, quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(message.jid ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "𝑻𝒉𝒊𝒔 𝒊𝒔 𝒚𝒐𝒖𝒓 𝒂𝒖𝒅𝒊𝒐 𝒇𝒊𝒍𝒆", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('./src/image/Stefanie.png')}}}});
             });
     }));
 
@@ -817,7 +819,7 @@ Neotro.addCommand({pattern: 'yt ?(.*)', fromMe: false, desc: Lang.YT_DESC}, (asy
             return await message.client.sendMessage(message.jid,Lang.NOT_FOUND,MessageType.text);
         }
     
-        var mesaj = '👩‍🦰 *Amazone Alexa YT SEARCH* 🚀\n\n ';
+        var mesaj = '👩‍🦰 *Stefanie bot YT SEARCH* 🚀\n\n ';
         arama.all.map((video) => {
             mesaj += '*🦹 ' + video.title + '* - \n⏰ Duration :- ' + video.duration + '\n' + video.url +'\n\n'
         });
