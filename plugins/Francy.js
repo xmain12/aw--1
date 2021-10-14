@@ -23,7 +23,7 @@ await axios
         } = response.data
 
    
-	const msg = `**◁◉◉◉◉Fancy Text◉◉◉▷* \n             *👩‍🦰ᴀᴍᴀᴢᴏɴᴇ ᴀʟp* * \n              \n\n ${result} \n\n                 *◄◉◉◉◉◉◉◉◉◉◉ᴀʟᴇxᴀ◉◉◉◉◉◉◉◉►*`
+	const msg = `**◁◉◉◉◉Fancy Text◉◉◉▷* \n             *👩‍🦰Stefanie* * \n              \n\n ${result} \n\n                 *◄◉◉◉◉◉◉◉◉◉◉ᴀʟᴇxᴀ◉◉◉◉◉◉◉◉►*`
 	
 	 await message.client.sendMessage(message.jid, msg , MessageType.text, {
           quoted: message.data,
