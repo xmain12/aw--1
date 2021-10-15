@@ -73,7 +73,7 @@ Stefanie.addCommand({
 
         const button = {
             buttonText: 'Click Me',
-            description: "👩‍🦰Amazone Alexa මූලික විධාන ලැයිස්තු - Command panel",
+            description: "👩‍🦰Stefanie bot මූලික විධාන ලැයිස්තු - Command panel",
             sections: sections,
             listType: 1
         }
